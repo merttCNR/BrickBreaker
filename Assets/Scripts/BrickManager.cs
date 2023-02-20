@@ -7,16 +7,19 @@ public class BrickManager : MonoBehaviour
 {
     BallManager ballManager;
     public GameObject powerUp;
+    float spawnPos;
+    Vector3 spawnLoc;
     void Start()
     {
         ballManager = GameObject.FindGameObjectWithTag("Ball").GetComponent<BallManager>();
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        spawnPos = Random.Range(-2.5f, 2.5f);
+        spawnLoc = new Vector3(spawnPos, 0f, 0f);
+
     }
 
 
@@ -24,10 +27,10 @@ public class BrickManager : MonoBehaviour
     {
       float dropRate =  Random.Range(0, 100);
 
-        if (dropRate > 50 )
+        if (dropRate > 90 )
         {
             
-            Instantiate(powerUp,ballManager.hitPos,Quaternion.identity);
+            Instantiate(powerUp,spawnLoc,Quaternion.identity);
 
         }
     }

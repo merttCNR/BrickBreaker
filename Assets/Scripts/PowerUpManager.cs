@@ -24,6 +24,8 @@ public class PowerUpManager : MonoBehaviour
         {
 
             ballManager.BallSpawn();
+            Destroy(this.gameObject);
+
 
         }
     }

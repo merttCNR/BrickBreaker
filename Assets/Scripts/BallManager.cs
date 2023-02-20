@@ -53,7 +53,7 @@ public class BallManager : MonoBehaviour
             other.gameObject.SetActive(false);
             
             
-            hitPos = this.transform.position;
+           // hitPos = this.transform.position;
             brickManager.Drop();
 
         }
