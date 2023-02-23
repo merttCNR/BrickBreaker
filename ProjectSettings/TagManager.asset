@@ -11,6 +11,7 @@ TagManager:
   - AudioManager
   - PowerUp
   - SettingMenu
+  - Canvas
   layers:
   - Default
   - TransparentFX

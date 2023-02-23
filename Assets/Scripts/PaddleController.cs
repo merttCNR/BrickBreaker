@@ -1,25 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
+
 
 public class PaddleController : MonoBehaviour
 {
     private float xMove;
     [SerializeField] float moveSpeed;
-    private Rigidbody2D rb;
-    private Collider2D col;
+   
 
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        col = GetComponent<Collider2D>();   
-        rb = GetComponent<Rigidbody2D>();
-    }
-
-    // Update is called once per frame
     void Update()
     {
         PaddleMove();

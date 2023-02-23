@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+
 
 public class BallManager : MonoBehaviour
 {
@@ -19,13 +17,13 @@ public class BallManager : MonoBehaviour
      rb.AddForce(new Vector2(ballForce,ballForce));
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        PressScape();
+        PressSpace();
     }
 
-    private void PressScape()
+    private void PressSpace()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -40,7 +38,7 @@ public class BallManager : MonoBehaviour
     {
         if (other.gameObject.CompareTag("DeadSq"))
         {
-            Destroy(this.gameObject); //eðer diger instantiate edilen toplar yok olmassa toplara tag ata tag üzerinden yok et.
+            Destroy(this.gameObject);
             isballDest= true;
         }
 
@@ -53,7 +51,7 @@ public class BallManager : MonoBehaviour
             other.gameObject.SetActive(false);
             
             
-           // hitPos = this.transform.position;
+           
             brickManager.Drop();
 
         }
